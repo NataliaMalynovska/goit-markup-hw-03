@@ -10,9 +10,7 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-.list {
-  list-style: none;
-}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -25,7 +23,29 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+.list {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+.title-mg {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 /* Хедер */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
 .logo {
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
@@ -42,12 +62,30 @@ body {
   color: var(--alternative-text-color);
 }
 .page-nav {
+  margin-left: 93px;
+  margin-right: auto;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.ad-list {
+  display: flex;
+  align-items: center;
+}
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
 .nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--main-text-color);
   text-decoration: none;
 }
@@ -71,17 +109,27 @@ body {
 /* Секция герой */
 .section-hero {
   color: var(--alternative-text-color);
-  background: var(--background-dark);
   letter-spacing: 0.06em;
   text-align: center;
+  background: var(--background-dark);
 }
 .hero-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 200px;
+
   font-size: 44px;
   font-weight: 900;
   line-height: 60px;
   text-transform: uppercase;
 }
 .hero-button {
+  padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 30px;
+  margin-bottom: 200px;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -89,7 +137,6 @@ body {
   letter-spacing: 0.06em;
   background: var(--accent-color);
   color: var(--alternative-text-color);
-  cursor: pointer;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -97,10 +144,21 @@ body {
   background: var(--background-light);
 }
 /* Секция особенности */
+
+.features-list {
+  display: flex;
+}
+
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
 .section-features-title {
   color: var(--alternative-text-color);
 }
 .features-title {
+  padding-top: 94px;
+  width: 270px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -108,6 +166,10 @@ body {
   text-transform: uppercase;
 }
 .features-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+
   color: var(--primary-text-color);
   font-size: 14px;
   line-height: 1.71;
@@ -116,46 +178,81 @@ body {
 /* Секция "Чем мы занимаемся" */
 .work-title,
 .team-title {
+  text-align: center;
+  padding-top: 94px;
+  padding-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
-  text-align: center;
+}
+.work-list,
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+.work-card {
+  padding-bottom: 94px;
 }
 /* Секция "Наша команда" */
 .section-team {
+  padding-bottom: 94px;
+
   background: var(--background-light);
 }
+
 .team-item {
   background: var(--main-background);
   letter-spacing: 0.03em;
   font-size: 16px;
   line-height: 1.19;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-name {
+  padding-top: 30px;
+
   font-weight: 500;
   font-size: 16px;
   text-align: center;
 }
 .team-profession {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+
   color: var(--primary-text-color);
   text-align: center;
 }
 /* Футер */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background: var(--background-dark);
 }
+.adress {
+  padding-top: 20px;
+}
 .footer-adr {
+  text-align: left;
+
+  color: var(--alternative-text-color);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  text-align: left;
-  color: var(--alternative-text-color);
+
   text-decoration: none;
 }
 .footer-mail-tel {
+  padding-top: 9px;
+
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -171,8 +268,30 @@ body {
   color: var(--accent-color);
 }
 /* Портфолио */
+.border {
+  border: 1px solid #ececec;
+}
+.section-portfolio {
+  padding-bottom: 94px;
+}
+.btn-list {
+  padding-top: 94px;
+  display: flex;
+  justify-content: center;
+}
+.btn-item {
+  margin-right: 8px;
+}
+.btn-item:last-child {
+  margin-right: 0;
+}
+/* .portfolio-btn:last-of-type { */
 
 .portfolio-btn {
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -180,17 +299,39 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   background: var(--background-light);
-  cursor: pointer;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
+  color: var(--alternative-text-color);
   background-color: var(--accent-color);
-  color: var(--alternative-text-color);
 }
-.portfolio {
-  color: var(--alternative-text-color);
+
+.portfolio-cards {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 
+  box-shadow: var(--background-dark);
+}*/
+
+.portfolio-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  width: 370px;
+}
+.portfolio-item:nth-child(3n) {
+  margin-right: 0px;
+}
+.portfolio-item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
 }
 .portfolio-title {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -198,12 +339,15 @@ body {
   text-align: left;
 }
 .portfolio-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 4px 24px 20px;
+
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   text-align: left;
   color: var(--primary-text-color);
-  width: ;
 }
 .current-btn {
   color: var(--accent-color);
