@@ -17,24 +17,27 @@
 <body>
 <!--Шапка сайта-->
     <header class="header">
-        <div class="container header-nav">
-            <a class="logo" href="./index.html">Web<span class="logo-color-header">Studio</span> </a>
-            <nav class="page-nav">
-                <ul class="nav-list list">
-                    <li class="nav-item"> <a class="nav-link" href="./index.html">Студия</a></li>
-                    <li class="nav-item"> <a class="nav-link current" href="./portfolio.html">Портфолио</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="">Контакты</a></li>
+        <div class="container">
+            <div class="header-nav">
+                <a class="logo" href="./index.html">Web<span class="logo-color-header">Studio</span> </a>
+                <nav class="page-nav">
+                    <ul class="nav-list list">
+                        <li class="nav-item"> <a class="nav-link " href="./index.html">Студия</a></li>
+                        <li class="nav-item"> <a class="nav-link current" href="./portfolio.html">Портфолио</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <ul class="ad-list list">
+                    <li class="nav-item"><a class="adress-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    <li class="nav-item"><a class="adress-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
                 </ul>
-            </nav>
-            <ul class="ad-list list">
-                <li class="nav-item"><a class="adress-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                <li class="nav-item"><a class="adress-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
-            </ul>
+            </div>
         </div>
     </header>
     <main>
-        <div class="border"></div>
-        <section class="section-portfolio container">
+    
+        <section class="section-portfolio ">
+            <div class="container">
         <h1 class="portfolio visually-hidden">Портфолио</h1>
             <ul class="btn-list list">
                 <li class="btn-item"><button type="button" class="portfolio-btn current-btn">Все</button>
@@ -45,7 +48,7 @@
             </ul>
             <ul class="portfolio-cards list">
                 <li class="portfolio-item">
-                    <img src="images/portfolio-notebook.jpg" alt="ноутбук" width="370" >
+                    <img  src="images/portfolio-notebook.jpg" alt="ноутбук" width="370" >
                     <h2 class="portfolio-title title-mg">Технокряк</h2>
                     <p class="portfolio-text">Веб-сайт</p>
                 </li>
@@ -80,7 +83,7 @@
                     <p class="portfolio-text">Дизайн</p>
                 </li>
                 <li class="portfolio-item">
-                    <img src="images/portfolio-labeltag.jpg" alt="проект labeltag" width="370">
+                    <img  src="images/portfolio-labeltag.jpg" alt="проект labeltag" width="370">
                     <h2 class="portfolio-title title-mg">Проект LAB</h2>
                     <p class="portfolio-text"> Маркетинг</p>
                 </li>
@@ -90,6 +93,7 @@
                     <p class="portfolio-text">Приложение</p>
                 </li>
             </ul>
+        </div>
         </section>
     </main>
 <!--Футер-->

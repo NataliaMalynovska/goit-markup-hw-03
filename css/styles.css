@@ -23,25 +23,41 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
-.list {
+img {
+  display: block;
+}
+ul {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-left: 0px;
 
   list-style: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .container {
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
 }
-.title-mg {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+
 /* Хедер */
+.header {
+  border: 1px solid #ececec;
+}
 .header-nav {
   display: flex;
   align-items: center;
@@ -137,6 +153,7 @@ body {
   letter-spacing: 0.06em;
   background: var(--accent-color);
   color: var(--alternative-text-color);
+  cursor: pointer;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -166,8 +183,6 @@ body {
   text-transform: uppercase;
 }
 .features-text {
-  margin-top: 0px;
-  margin-bottom: 0px;
   padding-top: 10px;
 
   color: var(--primary-text-color);
@@ -190,10 +205,13 @@ body {
 .work-list,
 .team-list {
   display: flex;
-  justify-content: space-between;
 }
 .work-card {
-  padding-bottom: 94px;
+  height: 294px;
+  margin-bottom: 94px;
+}
+.work-card + .work-card {
+  margin-left: 30px;
 }
 /* Секция "Наша команда" */
 .section-team {
@@ -211,6 +229,9 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+.team-item + .team-item {
+  margin-left: 30px;
 }
 .team-name {
   padding-top: 30px;
@@ -268,9 +289,7 @@ body {
   color: var(--accent-color);
 }
 /* Портфолио */
-.border {
-  border: 1px solid #ececec;
-}
+
 .section-portfolio {
   padding-bottom: 94px;
 }
@@ -299,7 +318,9 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   background: var(--background-light);
+  cursor: pointer;
 }
+
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   color: var(--alternative-text-color);
@@ -311,13 +332,13 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-/* 
-  box-shadow: var(--background-dark);
-}*/
-
+.current-btn {
+  color: var(--accent-color);
+}
 .portfolio-item {
   margin-right: 30px;
   margin-bottom: 30px;
+  border: 1px solid #eeeeee;
 
   width: 370px;
 }
@@ -348,7 +369,4 @@ body {
   letter-spacing: 0.03em;
   text-align: left;
   color: var(--primary-text-color);
-}
-.current-btn {
-  color: var(--accent-color);
 }
